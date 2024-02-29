@@ -14,6 +14,10 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
 
+app.get('/', (req, res) => {
+    res.send('¡Bienvenido a la página principal!');
+  });
+
 app.listen(PORT, ()=> {
     console.log(`Server is running on port ${PORT}`);
 });
