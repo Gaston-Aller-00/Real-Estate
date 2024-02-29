@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import { userRoute } from './routes/userRoute.js';
-// import { residencyRoute } from './routes/residencyRoute.js';
+import { residencyRoute } from './routes/residencyRoute.js';
 dotenv.config()
 
 const app = express();
@@ -23,6 +23,6 @@ app.listen(PORT, ()=> {
 });
 
 app.use('/api/user', userRoute)
-// app.use("/api/residency", residencyRoute)
+ app.use("/api/residency", residencyRoute)
 
 // db mongodb+srv://gastonallerdev:hola123@cluster0.c6jvl6v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
