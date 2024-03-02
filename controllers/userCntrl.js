@@ -127,7 +127,7 @@ export const toFav = asyncHandler(async (req, res) => {
   }
 });
 
-// // function to get all favorites
+// // function to get all favorites rediennciesss
 export const getAllFavorites = asyncHandler(async (req, res) => {
   const { email } = req.body;
   try {
